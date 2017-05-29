@@ -82,7 +82,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
 
-            <?php echo form_open('admin/do_delete'); ?>
+            <?php echo form_open('admin/do_searchevent'); ?>
             <div class="main-login main-center">
                     <form role ="form" class="form-horizontal" method="post" action="">
                         <table class="table table-hover" style="margin-bottom: 10rem;">
@@ -146,6 +146,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         	
                         	
                         </div>
+                        <br>
+                        
                         
 
                         
@@ -154,6 +156,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                    </form>
                      <?php echo form_close(); ?>
                 </div>
+                <div class="row">
+							<div class="col-md-2">
+								<a href="<?php echo site_url("user/index"); ?>"><button class="btn btn-xs btn-default"> Log Out</button></a>
+							</div>
+
+						</div>
         </div>
     </div>
 

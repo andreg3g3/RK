@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<br>
 	<div class="row">
 		<div class="col-md-3">
-			<a href="admin/index"><button class="btn btn-block btn-default"> Log Out</button></a>
+			<a href="<?php echo site_url("admin/index"); ?>"><button class="btn btn-block btn-default"> Log Out</button></a>
 		</div>
 
 	</div>
