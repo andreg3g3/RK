@@ -75,10 +75,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Welcome to Departement Calendar!</h1>
 	<div class="row">
 		<div class="col-md-6">
-			<button class="btn btn-success"></button>
+			<a href="<?php echo site_url('admin/create')?>"><button class="btn btn-success btn-block" style="height: 10rem;">CREATE EVENT</button></a>
+		</div>
+	
+		<div class="col-md-6">
+			 <button class="btn btn-danger btn-block" style="height: 10rem;">DELETE EVENT</button>			
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="row">
+		<div class="col-md-6">
+			<button class="btn btn-warning btn-block" style="height: 10rem;">MODIFY EVENT</button>
 		</div>
 		<div class="col-md-6">
-			<button class="btn btn-success"></button>			
+			<button class="btn btn-primary btn-block" style="height: 10rem;">ADD USER</button>			
 		</div>
 	</div>
 

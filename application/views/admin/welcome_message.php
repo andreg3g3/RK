@@ -109,28 +109,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>     
 
             <div class="panel-body" >
-
+            	<?php echo form_open('admin/aksi'); ?>
                 <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST">
                    
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="NIP" type="text" class="form-control" name="user" value="" placeholder="NIP">                                        
+                        <input id="NIP" type="text" class="form-control" name="NIP" placeholder="NIP">                                        
                     </div>
+                    <br>
 
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password" type="password" class="form-control" name="password" placeholder="Password">
                     </div>                                                                  
-
+                    <br>
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">
-                            <button type="submit" href="#" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
+                            <button type="submit" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-log-in"></i> Log in</button>                          
                         </div>
                     </div>
 
                 </form>     
-
+                <?php echo form_close(); ?>  
             </div>                     
         </div>  
     </div>
