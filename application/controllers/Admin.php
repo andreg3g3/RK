@@ -47,4 +47,20 @@ class Admin extends CI_Controller {
     {
     	
     }
+
+
+    public function modify()
+    {
+        $this->load->view('admin/modify');
+    }
+
+    public function delete()
+    {
+        $this->load->view('admin/delete');
+    }
+
+    public function adduser()
+    {
+        $this->load->view('admin/adduser');
+    }
 }

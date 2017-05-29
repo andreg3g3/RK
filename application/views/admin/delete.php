@@ -71,30 +71,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</style>
 </head>
 <body>
-<div id="container" class="col-md-12" style="z-index: 1; padding-bottom: 8rem;">
-	<h1>Welcome to Departement Calendar!</h1>
-	<div class="row">
-		<div class="col-md-6">
-			<a href="<?php echo site_url('admin/create')?>"><button class="btn btn-success btn-block" style="height: 10rem;">CREATE EVENT</button></a>
-		</div>
-	
-		<div class="col-md-6">
-			 <a href="<?php echo site_url('admin/delete')?>"><button class="btn btn-danger btn-block" style="height: 10rem;">DELETE EVENT</button></a>			
-		</div>
-	</div>
-	<br>
-	<br>
-	<div class="row">
-		<div class="col-md-6">
-			<a href="<?php echo site_url('admin/modify')?>"><button class="btn btn-warning btn-block" style="height: 10rem;">MODIFY EVENT</button></a>
-		</div>
-		<div class="col-md-6">
-			<a href="<?php echo site_url('admin/adduser')?>"><button class="btn btn-primary btn-block" style="height: 10rem;">ADD USER</button></a>			
-		</div>
-	</div>
+<div class="container">
+        <div class="row main">
+            <div class="panel-heading">
+                <div class="panel-title text-center">
+                    <h3 class="title">
+                        Delete an Event
+                    </h3>
+                </div>
+            </div>
 
-	<br>
-</div>
+
+            <?php echo form_open('admin/do_delete'); ?>
+            <div class="main-login main-center">
+                    <form role ="form" class="form-horizontal" method="post" action="">
+                        <table class="table table-hover">
+                        	<thead >
+                        		<tr>
+                        			<th>Event Name</th>
+		                        	<th>Event Date</th>
+		                        	<th>Event Time</th>
+		                        	<th>Event Detail</th>
+		                        	<th>Action</th>
+                        		</tr>
+                        	</thead>
+                        	<tbody>
+                        		<tr>
+				                    <td>CB-17001</td>
+				                    <td>REGULAR INSPECTION OF LIFTING GEARS</td>
+				                    <td class="text-center"><span class="label label-primary">Draft</span></td>
+				                    <td>20-Jan-2017</td>
+				                    <td><button class="btn btn-danger btn-xs">Hapus</button></td>
+				                    
+				                  </tr>
+                        	</tbody>
+
+
+                        </table>
+
+
+                   </form>
+                     <?php echo form_close(); ?>
+                </div>
+        </div>
+    </div>
 
 <!-- <img src="<?php echo base_url('assets/img/micr01.jpg'); ?>" style="width: 100%; height: 450px; z-index: -100; position: relative;"> -->
 
