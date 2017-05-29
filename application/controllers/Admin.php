@@ -45,7 +45,17 @@ class Admin extends CI_Controller {
 
     public function do_create()
     {
-    	
+    	$this->load->model('agenda');
+        //echo "string";
+        $l_namaEvent = $this->input->post('l_namaEvent');
+        $l_tanggalEvent = $this->input->post('l_tanggalEvent');
+        $l_waktu = $this->input->post('l_waktu');
+        $l_detail = $this->input->post('l_detail');
+        
+        //echo $l_namaEvent;
+
+        $this->agenda->create_event($l_namaEvent, $l_tanggalEvent, $l_waktu, $l_detail);
+        redirect(base_url('index.php/dashboard/index'));
     }
 
 

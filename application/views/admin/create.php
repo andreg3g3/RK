@@ -82,14 +82,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <?php echo form_open('admin/do_create'); ?>
             <div class="main-login main-center">
-                    <form role ="form" class="form-horizontal" method="post" action="">
-                        
+                    <form role ="form" class="form-horizontal" method="post" action="<?php echo base_url(); ?>Admin/do_create" enctype="multipart/form-data> 
                         <div class="form-group">
                             <label for="name" class="cols-md-2 control-label">Event Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="judul_post" id="judul_post"  placeholder="Enter Event Name"/>
+                                    <input type="text" class="form-control" type="text" name="l_namaEvent" id="l_namaEvent"  placeholder="Enter Event Name"/>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +98,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="date" class="form-control" name="isi_post" id="isi_post"  placeholder="Enter date"/>
+                                    <input type="date" class="form-control" type="date" name="l_tanggalEvent" id="l_tanggalEvent"  placeholder="Enter date"/>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +109,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="time" class="form-control" name="tanggal" id="tanggal"  placeholder="Enter time"/>
+                                    <input type="time" class="form-control" type="time" name="l_waktu" id="l_waktu"  placeholder="Enter time"/>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +119,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                   <input type="text" class="form-control" name="isi_post" id="isi_post"  placeholder="Enter detail of Event"/>
+                                   <input type="text" class="form-control" type="text" name="l_detail" id="l_detail"  placeholder="Enter detail of Event"/>
                                 </div>
                             </div>
                         </div>

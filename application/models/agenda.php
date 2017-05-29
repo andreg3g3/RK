@@ -1,6 +1,6 @@
 <?php
 
-class magenda extends CI_Model
+class agenda extends CI_Model
 {
 	public function list_event($l_start, $l_end){
 		$query = $this->db->query("
@@ -29,7 +29,7 @@ class magenda extends CI_Model
 		return $query->result_array();
 	}
 
-	public function get_notification($n_user, $n_event){
+	public function notify_me($n_user, $n_event){
 		$query = $this->db->query("INSERT INTO notify_user_event(User, Event)
 									values (".$n_user.", ".$n_event.")");
 
