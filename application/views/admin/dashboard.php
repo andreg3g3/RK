@@ -68,6 +68,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+
+	
 	</style>
 </head>
 <body>
@@ -91,6 +93,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="col-md-6">
 			<a href="<?php echo site_url('admin/adduser')?>"><button class="btn btn-primary btn-block" style="height: 10rem;">ADD USER</button></a>			
 		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-md-3">
+			<a href="admin/index"><button class="btn btn-block btn-default"> Log Out</button></a>
+		</div>
+
 	</div>
 
 	<br>
