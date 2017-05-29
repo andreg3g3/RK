@@ -20,8 +20,6 @@ class magenda extends CI_Model
 		return $query->result_array();
 	}
 
-	dasdjkabskdbajbdbajsb
-
 	public function get_notification($l_id){
 		$query = $this->db->query("
 			select l.*
