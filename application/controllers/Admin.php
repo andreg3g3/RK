@@ -27,7 +27,7 @@ class Admin extends CI_Controller {
 
         if ($cek == 1) {
             // $x = $this->session->set_userdata('userdata',$data);
-            redirect('dashboard');
+            redirect('dashboard/index');
         } else {
             echo '<script type="text/javascript">'; 
             echo 'alert("Wrong Username or Password!");'; 
