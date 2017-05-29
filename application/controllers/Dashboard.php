@@ -33,19 +33,11 @@ class Dashboard extends CI_CONTROLLER {
         // $this->load->view('home_v',$data);
         // $this->load->view('home_footer_v');
     }
-    function post($post_id)//single post page
-    {   
-        $this->load->model('comment_m');
-        $data['comments'] = $this->comment_m->get_comment($post_id);    
-        $data['post'] = $this->db_m->get_post($post_id);
-        // $class_name = array(
-        //     'home_class'=>'current', 
-        //     'login_class' =>'', 
-        //     'register_class' => '',
-        //     'upload_class'=>'',
-        //     'contact_class'=>'');
-        $this->load->view('home_header_v');
-        $this->load->view('single_post_v',$data);
-        $this->load->view('home_footer_v');
+
+    function index_user()//index page
+    {
+
+        $this->load->view('user/dashboard');
+
     }
 }

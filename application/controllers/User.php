@@ -4,6 +4,13 @@ if (!defined('BASEPATH'))
 
 class User extends CI_Controller {
 
+
+	function __construct() {
+        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+        $this->load->model('login_m');
+        $this->load->library('session','unit_test');
+    }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -23,4 +30,26 @@ class User extends CI_Controller {
 	{
 		$this->load->view('user/welcome_message');
 	}
+
+
+	function aksi() {
+		// echo ("salah");
+        $data = array(
+            'Username' => $this->input->post('NRP'),
+            'Password' => $this->input->post('password'));
+
+        // var_dump($data);
+        $cek = $this->login_m->m_aksi_user($data);
+
+        if ($cek == 1) {
+            // $x = $this->session->set_userdata('userdata',$data);
+            redirect('dashboard/index_user');
+        } else {
+            echo '<script type="text/javascript">'; 
+            echo 'alert("Wrong Username or Password!");'; 
+            echo 'location.replace ("http://localhost/RK/");';
+            echo '</script>';
+//            echo "salah";
+        }
+    }
 }

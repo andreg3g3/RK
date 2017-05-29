@@ -109,19 +109,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>     
 
             <div class="panel-body" >
-            	<?php echo form_open('admin/aksi'); ?>
+            	<?php echo form_open('user/aksi'); ?>
                 <form name="form" id="form" class="form-horizontal" enctype="multipart/form-data" method="POST" action="">
                    
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                         <input id="NRP" type="text" class="form-control" name="NRP" value="" placeholder="NRP">                                        
                     </div>
-
+                    <br>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                         <input id="password" type="password" class="form-control" name="password" placeholder="Password">
                     </div>                                                                  
 
+                    <br>
                     <div class="form-group">
                         <!-- Button -->
                         <div class="col-sm-12 controls">

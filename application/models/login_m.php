@@ -11,6 +11,11 @@ class Login_M extends CI_Model {
         return $d->num_rows();
     }
 
+    function m_aksi_user($data) {        
+        $d = $this->db->get_where('admin_user', $data);
+        return $d->num_rows();
+    }
+
 }
 
 ?>
