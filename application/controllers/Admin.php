@@ -76,12 +76,14 @@ class Admin extends CI_Controller {
         $l_id = $this->input->post('submit');
         $l_namaEvent = $this->input->post('l_namaEvent');
         $l_tanggalEvent = $this->input->post('l_tanggalEvent');
+        // var_dump($l_tanggalEvent);
         $l_waktu = $this->input->post('l_waktu');
         $l_detail = $this->input->post('l_detail');
         
-        //echo $l_namaEvent;
+        // //echo $l_namaEvent;
 
         $this->agenda->modify_event($l_id, $l_namaEvent, $l_tanggalEvent, $l_waktu, $l_detail);
+        // var_dump($l_tanggalEvent);
         redirect(base_url('index.php/dashboard/index'));
     }
 

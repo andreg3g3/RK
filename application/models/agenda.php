@@ -68,7 +68,7 @@ class agenda extends CI_Model
 	public function modify_event($l_id, $l_namaEvent, $l_tanggalEvent, $l_waktu, $l_detail){
 		$query = $this->db->query("
 			update events
-			set Nama_Event = '$l_namaEvent', Tanggal_Event = '$l_tanggal', Waktu = '$l_waktu', Detail = '$l_detail'
+			set Nama_Event = '$l_namaEvent', Tanggal_Event = '$l_tanggalEvent', Waktu = '$l_waktu', Detail = '$l_detail'
 		where ID_Event = '$l_id'
 		");
 	}
