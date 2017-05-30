@@ -14,6 +14,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('admin/welcome_message');
+
 	}
 
 	function aksi() {
@@ -61,7 +62,27 @@ class Admin extends CI_Controller {
 
     public function modify()
     {
-        $this->load->view('admin/modify');
+        $this->load->model('agenda');
+        $this->data['data_event'] = $this->agenda->hitung_event();
+        //echo $this->data['data_event'][0][Nama_Event];
+        $this->load->view('admin/modify',$this->data);
+    }
+
+    public function do_modify()
+    {
+
+        $this->load->model('agenda');
+        //echo "string";
+        $l_id = $this->input->post('submit');
+        $l_namaEvent = $this->input->post('l_namaEvent');
+        $l_tanggalEvent = $this->input->post('l_tanggalEvent');
+        $l_waktu = $this->input->post('l_waktu');
+        $l_detail = $this->input->post('l_detail');
+        
+        //echo $l_namaEvent;
+
+        $this->agenda->modify_event($l_id, $l_namaEvent, $l_tanggalEvent, $l_waktu, $l_detail);
+        redirect(base_url('index.php/dashboard/index'));
     }
 
     public function delete()

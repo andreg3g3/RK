@@ -44,6 +44,14 @@ class agenda extends CI_Model
 		return $query->result_array();
 	}
 
+	public function hitung_event(){
+		$query = $this->db->query("
+			select *
+			from events
+		");
+		return $query->result_array();
+	}
+
 	public function delete_event($l_id){
 		$query = $this->db->query("
 			DELETE FROM events 

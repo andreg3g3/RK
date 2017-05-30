@@ -82,17 +82,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <!-- DISINI NTR KAMU FOR EACH BIAR BANYAK EVENTNYA. KAMU PAKEK VALUE = SESUAI ISINYA DATABASE -->
-
+             <?php 
+            if(isset($data_event) && is_array($data_event) && count($data_event))
+            {
+            foreach($data_event as $key => $data): ?>
             <?php echo form_open('admin/do_modify'); ?>
             <div class="main-login main-center">
-                    <form role ="form" class="form-horizontal" method="post" action="">
+                    <form role ="form" class="form-horizontal" method="post" action="<?php echo base_url(); ?>Admin/do_modify">
                         
                         <div class="form-group">
                             <label for="name" class="cols-md-2 control-label">Event Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="judul_post" id="judul_post"  placeholder="Enter Event Name"/>
+                                    <input type="text" class="form-control" name="l_namaEvent" id="l_namaEvent"  value="<?php  echo $data_event[$key]['Nama_Event']?>">
                                 </div>
                             </div>
                         </div>
@@ -102,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="date" class="form-control" name="isi_post" id="isi_post"  placeholder="Enter date"/>
+                                    <input type="date" class="form-control" name="l_tanggalEvent" id="l_tanggalEvent"  value="<?php  echo $data_event[$key]['Tanggal_Event']?>"/>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="time" class="form-control" name="tanggal" id="tanggal"  placeholder="Enter time"/>
+                                    <input type="time" class="form-control" name="l_waktu" id="l_waktu"  value="<?php  echo $data_event[$key]['Waktu']?>"/>
                                 </div>
                             </div>
                         </div>
@@ -123,16 +126,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                   <input type="text" class="form-control" name="isi_post" id="isi_post"  placeholder="Enter detail of Event"/>
+                                   <input type="text" class="form-control" name="l_detail" id="l_detail"  value="<?php  echo $data_event[$key]['Detail']?>"/>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group ">
-                            <button type="submit" class="btn btn-warning btn-lg btn-block login-button">Post It</button>
+                            <button id="<?php echo $data_event[$key]['ID_Event'] ?>" name="submit" type="submit" class="btn btn-warning btn-lg btn-block login-button" value="<?php echo $data_event[$key]['ID_Event'] ?>">Post It</button>
                         </div>
                     </form>
                      <?php echo form_close(); ?>
+                      <?php endforeach; }?>
                 </div>
         </div>
     </div>
