@@ -97,10 +97,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         	</thead>
                         	<tbody>
                         		<tr>
-				                    <td>CB-17001</td>
-				                    <td>REGULAR INSPECTION OF LIFTING GEARS</td>
-				                    <td class="text-center"><span class="label label-primary">Draft</span></td>
-				                    <td>20-Jan-2017</td>
+				                    <td>halooooo</td>
+				                    <td>05/06/2017</td>
+				                    <td>06:00</td>
+				                    <td>detail acaranya disini</td>
 				                    <td><button class="btn btn-danger btn-xs">Hapus</button></td>
 				                    
 				                  </tr>
